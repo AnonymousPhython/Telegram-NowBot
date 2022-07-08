@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <meta charset="utf-8" />
+  <title></title>
+  <style media="screen">
+    input {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <input type="text" id="date-picker">
+  <br><br>
+  <button onclick="myFunction()">Submit</button>
+  <script>
+    function myFunction() {
+      const flatpickr = require("flatpickr");
+      var app = window.Telegram.WebApp;
+      var date = document.getElementById("myText").value;
+      app.sendData(date);
+      app.close();
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script type="text/javascript">
+    flatpickr("#date-picker", {});
+  </script>
+</body>
+
+</html>
