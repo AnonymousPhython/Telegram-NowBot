@@ -21,11 +21,11 @@
   <button onclick="myFunction()">Submit</button>
   <script>
     function myFunction() {
-      const flatpickr = require("flatpickr");
       var app = window.Telegram.WebApp;
-      var date = document.getElementById("myText").value;
+      var date = document.getElementById("date-picker").value;
       app.sendData(date);
       app.close();
+      console.log("Hi");
     }
   </script>
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
